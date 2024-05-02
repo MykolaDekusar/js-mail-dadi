@@ -1,9 +1,6 @@
 'use strict';
-
 const dadoUtente = Math.ceil(Math.random() * 6);
 const dadoComputer = Math.ceil(Math.random() * 6);
-
-
 if (dadoUtente > dadoComputer) {
     alert("Ha vinto il giocatore con un lancio di " + dadoUtente + " contro il " + dadoComputer + " del computer");
     console.log(dadoUtente, dadoComputer);
@@ -15,4 +12,3 @@ if (dadoUtente > dadoComputer) {
     console.log(dadoUtente, dadoComputer);
 }
 location.reload();
-
