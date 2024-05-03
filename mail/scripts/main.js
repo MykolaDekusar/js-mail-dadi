@@ -12,21 +12,24 @@ function ValidateEmail(emailUtente) {
     return (false)
 }
 //verifico che l'email inserita dall'utente sia conforme
+let validatore = true;
 if (ValidateEmail(emailUtente) === true) {
     console.log("OK");
     //faccio un ciclo confrontando l'email utente con la lista delle email
     for (let i = 0; i < listaEmail.length; i++) {
-        let validatore = i;
         //confronto l'email utente con la lista partendo da 0
         if (emailUtente === listaEmail[i]) {
             alert("Hai inserito un'email valida!!!")
+            validatore = false;
             break;
             //se non esco prima allora l'email risulta invalida
-        } else if (validatore === listaEmail.length - 1) {
-            alert("Email invalida");
         }
     }
-} else {
+    if (validatore) {
+        alert("Email sbagliata");
+    }
+}
+else {
     alert("Insert a valid email");
 }
 //ricarico la pagina ogni volta dopo il click OK del prompt
